@@ -53,12 +53,25 @@
         const melding = document.querySelector("#melding");
         console.log (melding.innerHTML);
     </script>
-    <p>se console -></p>
+    <p>se over og i console -></p>
 
     <h1>Oppgave 5</h1>
     <script>
-
+        melding.textContent = "javascript was here."
+        console.log (melding.textContent);
     </script>
-    <p>se console -></p>
+    <p>se over og i console -></p>
+
+    <h1>Oppgave 6</h1>
+    <script>
+        function visMelding() {
+            console.log ("knappen ble trykkket!");
+            melding.textContent="Du trykket på meg!";
+        }
+    </script>
+    <button onclick="visMelding()">Trykk på meg</button>
+    <p>se over og i console -></p>
+
+
 </body>
 </html>
