@@ -23,7 +23,6 @@
     <script>
         const navn = "Adrian";
         console.log (navn);
-        navn = "Adrian";
     </script>
     <style></style>
     <p>se console -></p>
@@ -41,12 +40,12 @@
     <h1>Oppgave 3</h1>
     <script>
         const alder = 17;
-        const elev = true;
+        const erElev = true;
         let tom;
         console.log (typeof(navn));
         console.log (typeof(alder));
         console.log (typeof(tom));
-        console.log (typeof(elev));
+        console.log (typeof(erElev));
     </script>
     <style></style>
     <p>se console -></p>
@@ -102,7 +101,7 @@
         const tekst = lagHilsen("ola")
         console.log(tekst)
     </script>
-    <p>se i console</p>
+    <p>se i console -></p>
 
     <h1>Oppgave 10</h1>
     <input type="text" id="navn10">
@@ -122,6 +121,81 @@
             hilsen.textContent = lagHilsen(skrevetnavn10, skrevetalder10)
         }
     </script>
-    <p>se i console</p>
+    <p>se i console -></p>
+
+    <h1>Oppgave 11</h1>
+    <button onclick="byttFarge()">Bytt farge</button>
+    <script>
+        function byttFarge() {
+            melding.style.backgroundColor = "lightblue"
+            melding.style.color = "darkblue"
+            melding.style.fontSize = "28px"
+        }
+    </script>
+    <p>Se på oppgave 4</p>
+
+    <h1>Oppgave 12</h1>
+    <script>
+        let antallKlikk = 0
+        function tellKlikk() {
+            antallKlikk++
+            const klikkelement = document.querySelector("#klikkmelding")
+            klikkelement.textContent = "Du har trykket " + antallKlikk + " ganger" 
+        }
+    </script>
+    <button onclick="tellKlikk()">Tell klikk</button>
+    <p id="klikkmelding"></p>
+    <p>se i console -></p>
+
+    <h1>Oppgave 13</h1>
+    <script>
+        const elev = {
+            navn: "Adrian", alder: 17, klasse: "2ITA", erElev: true
+        }
+        console.log(elev)
+        console.log(elev.navn);
+    </script>
+    <p>se i console -></p>
+
+    <h1>Oppgave 14</h1>
+    <script>
+        elev.presenter = function() {
+            console.log("Jeg heter " + this.navn + " og " + "går i " + this.klasse)
+        }
+        elev.presenter()
+    </script>
+    <p>Se i console -></p>
+
+    <h1>Oppgave 15</h1>
+    <input type="text" id="navn20">
+    <input type="number" id="alder20">
+    <input type="text" id="klasse20">
+    <button onclick="opprettElev()"> Opprett elev</button>
+    <div id="elevkort"></div>
+    <script>
+        function opprettElev() {
+            const navnfelt20 = document.querySelector("#navn20")
+            const alderfelt20 = document.querySelector("#alder20")
+            const klassefelt20 = document.querySelector("#klasse20")
+            const elevkort = document.querySelector("#elevkort")
+            const skrevetnavn20 = navnfelt20.value
+            const skrevetalder20 = alderfelt20.value
+            const skrevetklasse20 = klassefelt20.value
+            const nyElev = {
+                navn: skrevetnavn20,
+                alder: skrevetalder20,
+                klasse: skrevetklasse20,
+                presenter() {
+                    return this.navn + " går i " + this.klasse + " og er " + this.alder + " år."
+                }
+            }
+            const presentasjon = nyElev.presenter()
+            elevkort.textContent = presentasjon
+            elevkort.style.backgroundColor = "lightblue"
+            elevkort.style.color = "darkblue"
+            elevkort.style.fontSize = "28px"
+            console.log(nyElev)
+        }
+    </script>
 </body>
 </html>
