@@ -98,5 +98,24 @@
         console.log(poeng4 === maksPoeng4); 
     </script>
     <p>Se i console!</p>
+
+    <h1>Del 5</h1>
+    <script>
+        function sjekkBillett5() {
+            const alder = document.querySelector("#alder5").value;
+            const billett = document.querySelector("#billett5").checked;
+            console.log(alder + " og " + billett)
+            if (alder >= 16 && billett == true) {
+                console.log("Du slipper inn!")
+            }
+            else {
+                console.log("Du slipper ikke inn!")
+            }
+        }
+    </script>
+    <input type="number" placeholder="Hva er din alder" id="alder5">
+    <input type="checkbox" id="billett5"> Har du billet (check)?<br>
+    <button onclick="sjekkBillett5()">Sjekk</button>
+    <p>Se i console!</p>
 </body>
 </html>
