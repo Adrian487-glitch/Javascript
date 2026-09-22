@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript2</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Del 1</h1>
+    <script>
+        function sjekkAlder1() {
+            const inputFelt = document.querySelector("#alder1")
+            const resultat = document.querySelector("#resultat1")
+            const alder = inputFelt.value;
+            if (alder >= 18) {
+                resultat.innerHTML = "Du er myndig";
+                console.log("Du er myndig!");
+            }
+            else {
+                resultat.innerHTML = "Du er ikke myndig";
+                console.log("Du er ikke myndig!");
+            }
+        }
+    </script>
+    <input type="number" id="alder1">&nbsp;<button id="sjekk1" onclick="sjekkAlder1()">Sjekk alder</button>
+    <p id="resultat1"></p>
+
+    <h1>Del 2</h1>
+    <script>
+        function sjekkTemp2() {
+            const inputFelt = document.querySelector("#temp2")
+            const resultat = document.querySelector("#resultat2")
+            const temp = inputFelt.value;
+            if (temp >= 20) {
+                resultat.innerHTML = "Det er varmt";
+                console.log("Det er varmt!");
+            }
+            else {
+                resultat.innerHTML = "Det er kaldt";
+                console.log("Det er kaldt!");
+            }
+        }
+    </script>
+    <input type="number" id="temp2">&nbsp;<button id="sjekk2" onclick="sjekkTemp2()">Sjekk temperatur</button>
+    <p id="resultat2"></p>
+
+    <h1>Del 3</h1>
+    <script>
+        function sjekkKarakter3() {
+            const poeng = document.querySelector("#poeng3").value;
+            if (poeng > 89) {
+                console.log("Du fikk karakter A :)");
+            }
+            else if (poeng > 79) {
+                console.log("Du fikk karakter B :|");
+            }
+            else if (poeng > 69) {
+                console.log("Du fikk karakter C :(");
+            }
+            else {
+                console.log("Du fikk karakter D \:(");
+            }
+        }
+    </script>
+    <input type="number" id="poeng3" placeholder="Hvor mange poeng!">&nbsp;
+    <button onclick="sjekkKarakter3()">Sjekk</button>
+
+    <h1>Del 4</h1>
+    <script>
+        const alder4 = 17;
+        const grense4 = 18;
+        const poeng4 = "100";
+        const maksPoeng4 = 100; 
+        
+        console.log(alder4 == grense4); 
+
+        console.log(alder4 != grense4); 
+
+        console.log(alder4 > grense4); 
+
+        console.log(alder4 < grense4); 
+
+        console.log(alder4 >= grense4); 
+
+        console.log(alder4 <= grense4); 
+        
+        console.log(poeng4 == maksPoeng4); 
+
+        console.log(poeng4 === maksPoeng4); 
+    </script>
+</body>
+</html>
