@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            }
+    </style>
+</head>
+<body>
+    <h1>Sjekk om adgang</h1>
+    <script>
+        function sjekkAdgang() {
+            const alder = document.querySelector("#alder").value;
+            const foresatt = document.querySelector("#foresatt").checked;
+            const resultat = document.querySelector("#resultat")
+            if (alder >= 16 && foresatt == false) {
+                resultat.innerHTML = "Du kan gå inn!"; 
+                console.log("Du kan gå inn!")
+            }
+            else if (alder >= 0 && foresatt == true) {
+                resultat.innerHTML = "Du kan gå inn!"; 
+                console.log("Du kan gå inn!")
+            }
+            else {
+                resultat.innerHTML = "Du kan ikke gå inn!"; 
+                console.log("Du kan ikke gå inn!")
+            }
+        }
+    </script>
+    <input type="number" placeholder="Hva er din Alder" id="alder">
+    <input type="checkbox" id="foresatt">
+    <button onclick="sjekkAdgang()">Sjekk adgang</button>
+    <p id="resultat"></p>
+    <p>Se i console og på siden</p>
+
+</body>
+</html>
