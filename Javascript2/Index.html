@@ -117,5 +117,86 @@
     <input type="checkbox" id="billett5"> Har du billet (check)?<br>
     <button onclick="sjekkBillett5()">Sjekk</button>
     <p>Se i console!</p>
+
+    <h1>Del 6</h1>
+    <script>
+        function sjekkTilgang6() {
+            const elev = document.querySelector("#elev6").checked;
+            const lærer = document.querySelector("#lærer6").checked;
+            const resultat = document.querySelector("#resultat6")
+            if (elev == true && lærer == true) {
+                resultat.style.color = "red"
+                resultat.innerHTML = "Du kan ikke komme inn!";
+                console.log("Du kan ikke komme inn!")
+            }
+            else if (elev == true || lærer == true) {
+                resultat.style.color = "green"
+                resultat.innerHTML = "Du kan kom inn!";
+                console.log("Du kan kom inn!")
+            }
+            else {
+                resultat.style.color = "red"
+                resultat.innerHTML = "Du kan ikke komme inn!";
+                console.log("Du kan ikke komme inn!")
+            }
+        }
+    </script>
+    <input type="checkbox" id="elev6">Jeg er elev<br>
+    <input type="checkbox" id="lærer6">Jeg er lærer<br>
+    <button onclick="sjekkTilgang6()">Sjekk tilgang</button>
+    <p id="resultat6"></p>
+    <p>se i console og i side</p>
+
+    <h1>Del 7</h1>
+        Hvilken dag er det i dag?<br>
+    <script>
+        function sjekkDag7() {
+            const dag = Number(document.querySelector("#uke7").value);
+            const resultat = document.querySelector("#resultat7");
+
+            switch (dag) {
+                case 0:
+                    resultat.innerHTML = "Mandag";
+                    break;
+                case 1:
+                    resultat.innerHTML = "Tirsdag";
+                    break;
+                case 2:
+                    resultat.innerHTML = "Onsdag";
+                    break;
+                case 3:
+                    resultat.innerHTML = "Torsdag";
+                    break;
+                case 4:
+                    resultat.innerHTML = "Fredag";
+                    break;
+                case 5:
+                    resultat.innerHTML = "Lørdag";
+                    break;
+                case 6:
+                    resultat.innerHTML = "Søndag";
+                    break;
+            }
+        }
+    </script>
+    <select name="ukedag7" id="uke7" onchange="sjekkDag7()">
+        <option value="0">Mandag</option>
+        <option value="1">Tirsdag</option>
+        <option value="2">onsdag</option>
+        <option value="3">torsdag</option>
+        <option value="4">fredag</option>
+        <option value="5">lørdag</option>
+        <option value="6">søndag</option>
+    </select>
+    <p id="resultat7"></p>
+    <p>Se i siden</p>
+
+    <h1>Del 8</h1>
+    <script>
+        for (let i = 0; i <= 10; i++) {
+            console.log(i);
+        }
+    </script>
+    <p>Sjekk console</p>
 </body>
 </html>
