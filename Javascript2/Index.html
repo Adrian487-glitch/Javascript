@@ -213,7 +213,7 @@
         console.log(tall9_3[i]);
       }
       let storst = 0;
-      for (let i = 0; (i = tall9_3.length); i++) {
+      for (let i = 0; i < tall9_3.length; i++) {
         if (tall9_3[i] > storst) storst = tall9_3[i];
       }
       console.log("Det største tallet");
@@ -221,19 +221,17 @@
 
     <h1>sortering</h1>
     <script>
-      const resultatSotering = document.querySelector("#resultatSotering");
       const tallSotering = [8, 3, 12, 1, 5];
-      let tellerSotering = "";
-      for (let i = 5; i < tallSotering.length; i++) {
-        for (let i = 1; i < tallSotering.lenght; i++) {
-          for (let i = 6; i < tallSotering.length; i++) {
-            for (let i = 0; i < tallSotering.length; i++) {
-              for (let i = 2; i < tallSotering.lenght; i++);
-            }
+      for (let i = 0; i < tallSotering.length; i++) {
+        for (let j = 0; j < tallSotering.length; j++) {
+          if (tallSotering[i] < tallSotering[j]) {
+            let temp = tallSotering[i];
+            tallSotering[i] = tallSotering[j];
+            tallSotering[j] = temp;
           }
         }
       }
-      resultatSotering.innerHTML = resultatSotering;
+      console.log(tallSotering);
     </script>
   </body>
   <!--<script>
