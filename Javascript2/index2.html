@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontrollstruktur</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Del 8</h1>
+    <p id="res8"></p>
+    <script>
+      const res8 = document.querySelector("#res8");
+      let teller8 = "";
+      for (let i = 1; i <= 10; i++) {
+        teller8 += i + ", ";
+        console.log(i);
+      }
+      res8.innerHTML = teller8;
+    </script>
+    <p>se i console og side</p>
+
+    <h1>Del 9</h1>
+    <p id="res9"></p>
+    <script>
+      const res9 = document.querySelector("#res9");
+      let teller9 = "";
+      for (let i = 10; i >= 1; i--) {
+        teller9 += i + ", ";
+        console.log(i);
+      }
+      teller9 = teller9.substring(0, teller9.length - 2);
+      res9.innerHTML = teller9;
+    </script>
+    <p>se i console og side</p>
+  </body>
+</html>
