@@ -205,8 +205,21 @@
       }
     </script>
     <p>Sjekk console</p>
+
+    <h1>del 9,3</h1>
+    <script>
+      const tall = [8, 3, 12, 1, 5];
+      for (let i = 0; i < tall.length; i++) {
+        console.log(tall[i]);
+      }
+      let storst = 0;
+      for (let i = 0; (i = tall.length); i++) {
+        if (tall[i] > storst) storst = tall[i];
+      }
+      console.log("Det største tallet");
+    </script>
   </body>
-  <!--    <script>
+  <!--<script>
       const myPeople = [
         {
           name: "person 1",
