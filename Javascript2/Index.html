@@ -26,12 +26,11 @@
         }
       }
     </script>
-    <input type="number" id="alder1" />&nbsp;<button
-      id="sjekk1"
-      onclick="sjekkAlder1()"
-    >
-      Sjekk alder
-    </button>
+    <input
+      placeholder="Hva er din alder"
+      type="number"
+      id="alder1"
+    />&nbsp;<button id="sjekk1" onclick="sjekkAlder1()">Sjekk alder</button>
     <p id="resultat1"></p>
     <p>Se i console!</p>
 
@@ -50,12 +49,11 @@
         }
       }
     </script>
-    <input type="number" id="temp2" />&nbsp;<button
-      id="sjekk2"
-      onclick="sjekkTemp2()"
-    >
-      Sjekk temperatur
-    </button>
+    <input
+      placeholder="Hva er temperaturen"
+      type="number"
+      id="temp2"
+    />&nbsp;<button id="sjekk2" onclick="sjekkTemp2()">Sjekk temperatur</button>
     <p id="resultat2"></p>
     <p>Se i console!</p>
 
@@ -204,7 +202,7 @@
           age: 12313,
         },
       ];
-      
+
       for (let i = 1; i < myPeople.length; i++) {
         console.log(myPeople[i]);
       }
